@@ -3,7 +3,6 @@ export default function Loader() {
     <div className="loader-container">
       <div className="loader"></div>
       <p>Loading questdsdfsdfsdfions...</p>
-      <span>lsdjf</span>
     </div>
   );
 }
