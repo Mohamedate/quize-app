@@ -1,3 +1,6 @@
+import correctImage from "../images/correct1.svg";
+import wrongImage from "../images/wrong-answer.svg";
+
 const Options = ({ question, dispatch, answer }) => {
   const hasAnswered = answer !== null;
 
@@ -21,10 +24,10 @@ const Options = ({ question, dispatch, answer }) => {
           <span>{option}</span>
           <div className="image">
             {hasAnswered && index === question.correctOption && (
-              <img src="./images/correct1.svg" alt="answer" />
+              <img src={correctImage} alt="answer" />
             )}
             {hasAnswered && index !== question.correctOption && (
-              <img src="./images/wrong-answer.svg" alt="answer" />
+              <img src={wrongImage} alt="answer" />
             )}
           </div>
         </button>

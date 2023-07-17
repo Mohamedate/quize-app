@@ -8,7 +8,15 @@ import NextButton from "./NextButton";
 import Progress from "./Progress";
 import FinishScreen from "./FinishScreen";
 import Footer from "./Footer";
+// import all images of my app
+import logo from "../images/logo512.png";
+import javaScript from "../images/javascript.png";
+import html from "../images/html.png";
+import python from "../images/python.png";
+import cPlus from "../images/cplus.png";
+import java from "../images/java.png";
 
+// sound of correct and wrong answer
 import answerSoundUrl from "../sounds/correct-sound.mp3";
 import wrongSoundUrl from "../sounds/wrong-sound.wav";
 
@@ -16,15 +24,7 @@ const SECOND_PER_QUESTION = 30;
 const correctEffectSound = new Audio(answerSoundUrl);
 const wrongEffectSound = new Audio(wrongSoundUrl);
 
-const myImages = [
-  "./images/logo512.png",
-  "./images/javascript.png",
-  "./images/html.png",
-  "./images/python.png",
-
-  "./images/cplus.png",
-  "./images/java.png",
-];
+const myImages = [logo, javaScript, html, python, cPlus, java];
 
 const initialState = {
   questions: [],
