@@ -1,13 +1,10 @@
 :root {
-  --color-darkest: #343a40;
-  --color-dark: #495057;
   --color-medium: #ced4da;
   --color-light: #f1f3f5;
   --color-theme: #1098ad;
   --color-accent: #ffa94d;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Special+Elite&family=Ysabeau+Infant:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap");
 
 * {
   margin: 0;
@@ -16,9 +13,11 @@
 }
 
 html {
-  font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-family: "Belanosima", sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-family: "Special Elite", cursive;
+  font-family: "Ysabeau Infant", sans-serif;
 }
 
 body {
@@ -59,13 +58,19 @@ progress::-webkit-progress-value {
   align-items: center;
   justify-content: space-between;
 }
-.app-header img {
-  animation: effect-logo 5s linear infinite;
-}
 
 .timer {
-  font-size: 1.8rem;
+  font-size: 5rem;
   color: var(--color-medium);
+  font-weight: 700;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    linear-gradient(98.94deg, #00bcff 0.87%, #814bf6 57.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .timer.worning {
@@ -86,12 +91,13 @@ progress::-webkit-progress-value {
   border-radius: 100px;
 }
 
-img {
-  width: 10rem;
+.app-header img {
+  width: 12rem;
 }
 
 h1 {
   font-size: 5.6rem;
+  font-weight: 800;
   background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.2),
@@ -106,13 +112,14 @@ h1 {
 h2 {
   font-size: 3.6rem;
   margin-bottom: 2rem;
+  font-weight: 800;
 
   /* transition: 0.2s; */
 }
 
 h3 {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 4rem;
 }
 
@@ -268,19 +275,18 @@ progress {
   margin-right: 4px;
 }
 
-.highscore {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 4.8rem;
-}
-
-.loader-container {
+.finish {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.image-finish {
+  width: 100%;
+  display: flex;
   align-items: center;
-  margin-top: 4rem;
-  gap: 1.6rem;
-
-  color: var(--color-medium);
-  font-size: 1.4rem;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.image-finish img {
+  width: 20rem;
 }

@@ -1,10 +1,10 @@
-function StartScreen({ numQuestions, dispatch, myImage }) {
+function StartScreen({ numQuestions, dispatch, myImages }) {
   return (
     <div className="start">
       <h2>You Are In The Right Place!</h2>
       <h3>Select Your Favorite Topic!</h3>
       <div className="select">
-        {myImage.map((item, i) => (
+        {myImages.map((item, i) => (
           <StartScreenOption
             key={i}
             imgItem={item}

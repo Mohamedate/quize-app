@@ -11,15 +11,20 @@ import Footer from "./Footer";
 
 import answerSoundUrl from "../sounds/correct-sound.mp3";
 import wrongSoundUrl from "../sounds/wrong-sound.wav";
-import jsImage from "./images/js.svg";
-import pyImage from "./images/python.svg";
-import htmlImage from "./images/html.svg";
-import reactImage from "./images/react.svg";
 
-const myImage = [pyImage, htmlImage, reactImage, jsImage];
 const SECOND_PER_QUESTION = 30;
 const correctEffectSound = new Audio(answerSoundUrl);
 const wrongEffectSound = new Audio(wrongSoundUrl);
+
+const myImages = [
+  "./images/logo512.png",
+  "./images/javascript.png",
+  "./images/html.png",
+  "./images/python.png",
+
+  "./images/cplus.png",
+  "./images/java.png",
+];
 
 const initialState = {
   questions: [],
@@ -28,23 +33,29 @@ const initialState = {
   index: 0,
   answer: null,
   points: 0,
-  secondRemaining: SECOND_PER_QUESTION * data.html.length,
+  secondRemaining: 0,
 };
 
 function reducer(state, { type, payloads }) {
   switch (type) {
     case "start":
+      const newQuestions =
+        payloads === 0
+          ? data.react
+          : payloads === 1
+          ? data.javaScript
+          : payloads === 2
+          ? data.html
+          : payloads === 3
+          ? data.python
+          : payloads === 4
+          ? data.cPlus
+          : data.java;
       return {
         ...state,
-        questions:
-          payloads === 0
-            ? data.python
-            : payloads === 1
-            ? data.html
-            : payloads === 2
-            ? data.react
-            : data.javaScript,
+        questions: newQuestions,
         indexOfImage: payloads,
+        secondRemaining: newQuestions.length * SECOND_PER_QUESTION,
         status: "active",
       };
 
@@ -108,15 +119,15 @@ const App = () => {
             <h1>Are You Ready To Challenge Yourself !?</h1>
             <StartScreen
               numQuestions={numQuestions}
-              myImage={myImage}
               dispatch={dispatch}
+              myImages={myImages}
             />
           </>
         )}
         {status === "active" && (
           <>
             <Header
-              myImage={myImage}
+              myImages={myImages}
               indexOfImage={indexOfImage}
               dispatch={dispatch}
               secondRemaining={secondRemaining}
@@ -147,6 +158,8 @@ const App = () => {
             points={points}
             maxPoints={maxPoints}
             dispatch={dispatch}
+            indexOfImage={indexOfImage}
+            myImages={myImages}
           />
         )}
       </Main>
