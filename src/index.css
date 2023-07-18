@@ -130,13 +130,13 @@ h4 {
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: 3.6rem;
+    font-size: 4rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   img {
     width: 10rem;
@@ -192,12 +192,10 @@ progress {
   );
   /* margin-left: auto; */
 }
-.btn:hover {
-  background-color: #070628;
-}
+
 @media (max-width: 768px) {
   .btn {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 

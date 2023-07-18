@@ -8,6 +8,7 @@ import NextButton from "./NextButton";
 import Progress from "./Progress";
 import FinishScreen from "./FinishScreen";
 import Footer from "./Footer";
+
 // import all images of my app
 import logo from "../images/logo512.png";
 import javaScript from "../images/javascript.png";
