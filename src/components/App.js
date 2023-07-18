@@ -5,6 +5,7 @@ import data from "./questions";
 import StartScreen from "./StartScreen";
 import Question from "./Question";
 import NextButton from "./NextButton";
+import ExitButton from "./ExitButton";
 import Progress from "./Progress";
 import FinishScreen from "./FinishScreen";
 import Footer from "./Footer";
@@ -145,6 +146,7 @@ const App = () => {
               answer={answer}
             />
             <Footer>
+              <ExitButton />
               <NextButton
                 dispatch={dispatch}
                 answer={answer}
