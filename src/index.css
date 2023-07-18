@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  min-height: 120vh;
+  min-height: 110vh;
   color: var(--color-light);
   /* background-color: var(--color-darkest); */
   background: url(../public/bg-stars-1.webp) rgb(2, 0, 36);
@@ -140,7 +140,7 @@ h4 {
   }
   .app-header img,
   img {
-    width: 10rem;
+    width: 8rem;
   }
 }
 .start {
@@ -186,14 +186,19 @@ progress {
   border-radius: 100px;
   transition: 0.5s;
   background: linear-gradient(
-    15deg,
-    rgb(13, 15, 74) 0%,
-    rgb(26, 31, 129) 43%,
-    rgb(7, 4, 43) 100%
-  );
-  /* margin-left: auto; */
+      45deg,
+      rgb(13, 15, 74) 0%,
+      rgb(26, 31, 129) 25%,
+      rgb(7, 4, 43) 50%,
+      rgb(13 10 58) 51%
+    )
+    no-repeat;
+  background-size: 500px 500px;
+  background-position: -250px 0px;
 }
-
+.btn:hover {
+  background-position: 0px -300px;
+}
 @media (max-width: 768px) {
   .btn {
     font-size: 2rem;
@@ -212,13 +217,13 @@ progress {
   width: 100%;
 }
 .btn-ui {
-  background: #12103a;
   padding: 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
 }
+
 .btn-ui img {
   width: 8rem;
 }
@@ -226,17 +231,37 @@ progress {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 3rem;
 }
 
 .btn-option {
   width: 100%;
+  height: 5.5rem;
   text-align: left;
   transform: translateX(-5px);
   transition: 0.5s;
+
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  border: none;
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  border-radius: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(
+    15deg,
+    rgb(13, 15, 74) 0%,
+    rgb(26, 31, 129) 50%,
+    rgb(7, 4, 43) 100%
+  );
+}
+@media (max-width: 768px) {
+  .btn-option {
+    height: 5rem;
+  }
 }
 .btn-option .image {
   flex: 0 0 5%;
@@ -288,4 +313,11 @@ progress {
 .footer {
   display: flex;
   justify-content: space-between;
+}
+.copyright {
+  text-align: center;
+  margin-top: 6rem;
+  font-size: 3rem;
+  /* background: black; */
+  color: #ffeb3b;
 }

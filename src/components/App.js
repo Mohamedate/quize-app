@@ -146,7 +146,7 @@ const App = () => {
               answer={answer}
             />
             <Footer>
-              <ExitButton />
+              <ExitButton dispatch={dispatch} />
               <NextButton
                 dispatch={dispatch}
                 answer={answer}

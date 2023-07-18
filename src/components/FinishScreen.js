@@ -20,6 +20,7 @@ const FinishScreen = ({
       >
         Restart
       </button>
+      <div className="copyright">Designed and Coded By Eng/Mohamed Atef</div>
     </div>
   );
 };

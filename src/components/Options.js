@@ -9,7 +9,7 @@ const Options = ({ question, dispatch, answer }) => {
       {question.options.map((option, index) => (
         <button
           key={option}
-          className={`btn btn-option ${
+          className={`btn-option ${
             index === answer && hasAnswered ? "answer" : ""
           } ${
             hasAnswered
