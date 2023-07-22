@@ -1,6 +1,6 @@
 # Quize-app Project
 
-This is the first project that I have just finished, using the power tools in React.
+This is the first project that I have just finished, using the power tools of React.
 
 
 ### Users experience 
