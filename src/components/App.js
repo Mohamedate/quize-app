@@ -21,10 +21,12 @@ import java from "../images/java.png";
 // sound of correct and wrong answer
 import answerSoundUrl from "../sounds/correct-sound.mp3";
 import wrongSoundUrl from "../sounds/wrong-sound.wav";
-
-const SECOND_PER_QUESTION = 30;
+import worningSound from "../sounds/warningClock.wav";
+const worning = new Audio(worningSound);
 const correctEffectSound = new Audio(answerSoundUrl);
 const wrongEffectSound = new Audio(wrongSoundUrl);
+
+const SECOND_PER_QUESTION = 5;
 
 const myImages = [logo, javaScript, html, python, cPlus, java];
 
@@ -71,12 +73,15 @@ function reducer(state, { type, payloads }) {
         answer: payloads,
         points: isCorrect ? state.points + question.points : state.points,
       };
+
     case "nextQuestion":
       const lastQuestion = state.index === state.questions.length - 1;
       if (lastQuestion) {
+        worning.pause();
         return {
           ...state,
           status: "finished",
+          worningSoundState: false,
         };
       }
 
@@ -85,15 +90,17 @@ function reducer(state, { type, payloads }) {
         index: state.index + 1,
         answer: null,
       };
+
     case "restart":
       return {
         ...initialState,
       };
     case "tickTimer":
+      if (state.secondRemaining < 9) worning.play();
       if (!state.secondRemaining) {
         return {
           ...state,
-          secondRemaining: SECOND_PER_QUESTION,
+          status: "finished",
         };
       }
       return {

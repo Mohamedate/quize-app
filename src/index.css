@@ -74,9 +74,16 @@ progress::-webkit-progress-value {
 }
 
 .timer.worning {
+  background: none;
   color: red;
+  -webkit-text-fill-color: inherit;
+  animation: effect-worning 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
+@keyframes effect-worning {
+  100% {
+    transform: scale(1.2);
+  }
+}
 @keyframes effect-logo {
   100% {
     transform: rotate(360deg);
@@ -274,7 +281,8 @@ progress {
   transform: translateX(2rem);
 }
 
-.result {
+.result,
+.btn-resault {
   background: linear-gradient(
     15deg,
     rgb(13, 15, 74) 0%,
@@ -288,6 +296,15 @@ progress {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1.6rem;
+  border: none;
+}
+.result {
+  border-radius: 10px;
+  background: transparent;
+}
+.btn-resault {
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .result span {
