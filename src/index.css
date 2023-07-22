@@ -29,6 +29,25 @@ body {
   background-position: center;
   /* padding: 1rem; */
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #814bf6;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(2, 0, 36);
+}
 progress::-webkit-progress-bar {
   background-color: rgb(2, 0, 36);
 }
@@ -83,6 +102,9 @@ progress::-webkit-progress-value {
   100% {
     transform: scale(1.2);
   }
+}
+.react {
+  animation: effect-logo 3s infinite linear;
 }
 @keyframes effect-logo {
   100% {
@@ -336,5 +358,8 @@ progress {
   margin-top: 6rem;
   font-size: 3rem;
   /* background: black; */
+  color: #ffeb3b;
+}
+.copyright a {
   color: #ffeb3b;
 }

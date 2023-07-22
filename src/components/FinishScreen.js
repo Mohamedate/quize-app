@@ -1,5 +1,3 @@
-const lose = <p>You have to work harder &#128549;</p>;
-const win = <p>Good jop bro &#128079;</p>;
 const FinishScreen = ({
   points,
   maxPoints,
@@ -8,22 +6,40 @@ const FinishScreen = ({
   dispatch,
 }) => {
   const percentage = Math.ceil((points / maxPoints) * 100);
+  let messageToPlayer;
+  if (percentage < 50) {
+    messageToPlayer = "You have to work harder 😢";
+  } else if (percentage < 80) {
+    messageToPlayer =
+      "You are doing well but a little of work will make you better 🤩";
+  } else {
+    messageToPlayer = "Well done that's great 👏🥳";
+  }
   return (
     <div className="finish">
       <div className="image-finish">
         <img src={myImages[indexOfImage]} alt="finish" />
       </div>
-      <p className="result">
+      <div className="result">
         You Scored {points} out of {maxPoints} ({percentage}%)
-        {percentage < 50 ? lose : win}
-      </p>
+        <p>{messageToPlayer}</p>
+      </div>
       <button
         className=" btn-resault"
         onClick={() => dispatch({ type: "restart" })}
       >
-        Restart Game &#128170;
+        Play Game Again 💪
       </button>
-      <div className="copyright">Designed and Coded By Eng/Mohamed Atef</div>
+      <div className="copyright">
+        Designed and Coded By Eng/
+        <a
+          href="https://mohamedate.github.io/Mohamed_Atef/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Mohamed Atef 👨🏻‍💻
+        </a>
+      </div>
     </div>
   );
 };

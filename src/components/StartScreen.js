@@ -1,8 +1,8 @@
 function StartScreen({ numQuestions, dispatch, myImages }) {
   return (
     <div className="start">
-      <h2>You Are In The Right Place!</h2>
-      <h3>Select Your Favorite Topic!</h3>
+      <h2>You Are In The Right Place! 👌</h2>
+      <h3>Select Your Favorite Topic! </h3>
       <div className="select">
         {myImages.map((item, i) => (
           <StartScreenOption
@@ -23,7 +23,7 @@ const StartScreenOption = ({ imgItem, dispatch, index }) => {
       className="btn btn-ui"
       onClick={() => dispatch({ type: "start", payloads: index })}
     >
-      <img src={imgItem} alt="img" />
+      <img className={index === 0 ? "react" : ""} src={imgItem} alt="img" />
     </button>
   );
 };

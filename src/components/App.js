@@ -26,7 +26,7 @@ const worning = new Audio(worningSound);
 const correctEffectSound = new Audio(answerSoundUrl);
 const wrongEffectSound = new Audio(wrongSoundUrl);
 
-const SECOND_PER_QUESTION = 5;
+const SECOND_PER_QUESTION = 30;
 
 const myImages = [logo, javaScript, html, python, cPlus, java];
 
@@ -92,6 +92,7 @@ function reducer(state, { type, payloads }) {
       };
 
     case "restart":
+      worning.pause();
       return {
         ...initialState,
       };
@@ -125,7 +126,7 @@ const App = () => {
       <Main>
         {status === "" && (
           <>
-            <h1>Are You Ready To Challenge Yourself !?</h1>
+            <h1>Are You Ready To Challenge Yourself!?</h1>
             <StartScreen
               numQuestions={numQuestions}
               dispatch={dispatch}
