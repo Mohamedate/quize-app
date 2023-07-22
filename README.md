@@ -1,7 +1,8 @@
 # Quize-app Project
+![](./screen.png)
 
-This is the first project that I have just finished, using the power tools of React.
 
+ # This is the first project that I have just finished, using the power tools of React.
 
 ### Users experience 
 
@@ -11,9 +12,9 @@ This is the first project that I have just finished, using the power tools of Re
 - Users can exit the app at any time they wish.
 - After selecting a topic, users can choose the correct answer and continue the exam until they finish.
 
-### Screenshot
 
-![](./screen.png)
+
+
 
 ### Links
 
