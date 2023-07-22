@@ -1,13 +1,11 @@
 # Quize-app Project
 
-This is a project that I have just finished, using the power tools in React.
+This is the first project that I have just finished, using the power tools in React.
 
 
-### The challenge
+### Users experience 
 
-Users should be able to:
-
-- The app should display an optimal layout based on the user's device screen size.
+-Users will have an optimal experience with the app as it will dynamically adjust its layout to fit their device screen size.
 - Users should be able to view hover states for all interactive elements on the page.
 - Users can choose the language in which they want to test their skills.
 - Users can exit the app at any time they wish.
@@ -19,7 +17,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
