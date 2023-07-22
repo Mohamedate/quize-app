@@ -32,15 +32,15 @@ This is the first project that I have just finished, using the power tools in Re
 
 ### What I learned
 
-I have learned a lot of powerful techniques in React, such as managing state with `useReducer`, rendering components conditionally, understanding how data flows from parent to child using props, lifting up state, rendering UI based on certain actions, and many other fun things.
+I have learned a lot of powerful techniques in React, such as managing state with `useReducer`, rendering components conditionally, understanding how data flows from parent to child using props, lifting up state, rendering UI based on certain actions, how to split large code to small components 
+and many other fun things.
 
 ### Continued development
-
+I am currently focusing on advanced topics in React, such as the Context API, React Router, and remote state management. These topics are crucial for building more sophisticated and feature-rich applications. By mastering the Context API, I can efficiently manage state across components and avoid prop drilling. With React Router, I can implement smooth navigation and create a multi-page user experience. Additionally, learning about remote state management will enable me to work with data from external sources, like APIs, and keep my application in sync with the backend. These advanced concepts will undoubtedly level up my React skills and open up new possibilities for creating powerful and dynamic web applications. I'm excited to continue my learning journey and apply these techniques to real-world projects!
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Visit my website](https://www.your-site.com)
+
 
 
