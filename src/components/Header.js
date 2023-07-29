@@ -1,6 +1,8 @@
+import { useQuize } from "../context/QuizeContext";
 import Timer from "./Timer";
 
-const Header = ({ dispatch, secondRemaining, myImages, indexOfImage }) => {
+const Header = () => {
+  const {myImages, indexOfImage} = useQuize()
   return (
     <header className="app-header">
       <img
@@ -8,7 +10,7 @@ const Header = ({ dispatch, secondRemaining, myImages, indexOfImage }) => {
         src={myImages[indexOfImage]}
         alt="React logo"
       />
-      <Timer dispatch={dispatch} secondRemaining={secondRemaining} />
+      <Timer />
     </header>
   );
 };

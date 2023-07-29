@@ -1,10 +1,7 @@
-const FinishScreen = ({
-  points,
-  maxPoints,
-  myImages,
-  indexOfImage,
-  dispatch,
-}) => {
+import { useQuize } from "../context/QuizeContext";
+
+function FinishScreen() {
+  const { points, maxPoints, myImages, indexOfImage, dispatch } = useQuize();
   const percentage = Math.ceil((points / maxPoints) * 100);
   let messageToPlayer;
   if (percentage < 50) {
@@ -42,6 +39,6 @@ const FinishScreen = ({
       </div>
     </div>
   );
-};
+}
 
 export default FinishScreen;

@@ -1,9 +1,12 @@
+import { useQuize } from "../context/QuizeContext";
 import correctImage from "../images/correct1.svg";
 import wrongImage from "../images/wrong-answer.svg";
 
-const Options = ({ question, dispatch, answer }) => {
+function Options() {
+  const { questions, dispatch, answer, index } = useQuize();
   const hasAnswered = answer !== null;
 
+  const question = questions[index];
   return (
     <div className="options">
       {question.options.map((option, index) => (
@@ -34,6 +37,6 @@ const Options = ({ question, dispatch, answer }) => {
       ))}
     </div>
   );
-};
+}
 
 export default Options;

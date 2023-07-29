@@ -1,31 +1,25 @@
-function StartScreen({ numQuestions, dispatch, myImages }) {
+import { useQuize } from "../context/QuizeContext";
+
+function StartScreen() {
+  const { myImages, dispatch } = useQuize();
+
   return (
     <div className="start">
       <h2>You Are In The Right Place! 👌</h2>
       <h3>Select Your Favorite Topic! </h3>
       <div className="select">
-        {myImages.map((item, i) => (
-          <StartScreenOption
-            key={i}
-            imgItem={item}
-            dispatch={dispatch}
-            index={i}
-          />
+        {myImages.map((item, index) => (
+          <button
+            key={index}
+            className="btn btn-ui"
+            onClick={() => dispatch({ type: "start", payloads: index })}
+          >
+            <img className={index === 0 ? "react" : ""} src={item} alt="img" />
+          </button>
         ))}
       </div>
     </div>
   );
 }
-
-const StartScreenOption = ({ imgItem, dispatch, index }) => {
-  return (
-    <button
-      className="btn btn-ui"
-      onClick={() => dispatch({ type: "start", payloads: index })}
-    >
-      <img className={index === 0 ? "react" : ""} src={imgItem} alt="img" />
-    </button>
-  );
-};
 
 export default StartScreen;
