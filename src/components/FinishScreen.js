@@ -30,7 +30,7 @@ function FinishScreen() {
       <div className="copyright">
         Designed and Coded By Eng/
         <a
-          href="https://mohamedate.github.io/Mohamed_Atef/"
+          href="https://atef.vercel.app"
           target="_blank"
           rel="noreferrer"
         >
